@@ -1,0 +1,124 @@
+# Media Queries
+## Responsive Web Design
+- accessible on any technology (various screen sizes)
+- adjusts with screen size
+- want things done as quickly and cheaply as possible
+    - m dot - mobile version built seperately
+    - watered down experience - no real functions
+    - 3 different versions to maintain
+- CSS rules to apply layouts to conditions regardless of screen size
+    - as size changes rules change
+    - one code base
+- <b> Media Queries </b>
+    - CSS rules that apply when certain requirements are met
+    - example:
+        - @media (min-width: 768px) {
+            - div.wrapper {
+            - background-color: green;
+            - color: yellow;
+            - max-width: 900px;
+            - }
+        - }
+- massive device fragmentation
+    - many different screen sizes provided by many different companies
+---
+## How to Begin Responsive Design
+- hierarchy of content
+    - order for culture (US reads left to right)
+- MOBILE FIRST
+    - design and code mobile first
+    - solve most difficult problems first (small canvas)
+    - helps to decide what is really important and ensure content fits
+- CSS initially everything you need to make it work in the smallest screen size
+    - start making screen bigger/ wider
+    - when things look weird: add media query
+- <b> can add a break point to fix just one thing </b>
+- USE DEV TOOLS IN BROWSER TO WORK WITH SCREEN SIZE
+- check work on as many different devices and browswrs as possible
+---
+## Steps
+- < meta name="viewport" ... />
+    - tell browser site is mobile friendly
+    - <b> google ranks mobile meta tag higher </b>
+    - contains: content, user-scale, width, maximum-scale
+    - example:
+        - < meta name="viewport"
+        - content="initial-scale=1.0, (initial scale is 1)
+        - user-scalable=no, (user cannot pinch zoom)
+        - width=device-width,
+        - maximum-scale=1.0" /> (sets zoom in limit to 1)
+    - want users to zoom - bad eyes, images, etc.
+    - WANT initial scale and width
+- fluid design uses scalable sizing - percentages
+    - these units are based on the pixel screen size
+    - fluid containers, font sizes, etc.
+        - 100% means 100% of user preference
+        - not set 100% is about 16px
+    - responds to amount of space available
+---
+## What's Next
+- look at design from mobile first standpoint
+- start incorporating media queries
+- can look at:
+    - width and height of viewport
+    - width and height of device
+    - orientation
+    - resolution (1x, 2x, 3x) - better resolution images
+    - available features - is the browser smart enough to know about certain types of code
+    - other device capabilities
+- media types
+    - print
+        - set up style sheet for case of print
+    - screen
+    - speach
+---
+## Set up Media Query
+- if result is true, rules are applied
+- if not true, rules outside of query will be applied
+- example
+    - @media screen and (win-width:480px)
+    - screen and width less than 480px
+- <b> Style sheet ordering </b>
+    - general styles
+    - mobile first styles
+    - media queries (resize and add when needed)
+---
+## Example Notes
+- : calls outermost element
+- make variabeles in css (--name)
+    - ex: --blue: #hexcode;
+    - now when you want this shade you can call "var(--blue)" (NEED --)
+- can call custom properties referencing other custom properties
+    - --primary: var(--blue);
+    - when you want your primary color you can now just call --primary
+    - can now call media queries and change primary and not have to change every color
+- put custom properties in root element so they can be used anywhere down the page
+    - if variable is created in h1, will only be available to be called for h1 elements
+- *, *:before, *:after 
+    - calls every element and every element that appears before and after
+    - <b> considered a CSS best practice 2020 </b>
+- verticle rythm
+    - margins only on top or bottom
+- pseudo selector (box p: last-child)
+    - chooses last of p element in box container
+- <b>SOME BROWSERS HAVE A BUG WITH MEDIA QUERY AND REM UNITS</b>
+    - do not use rems with media query
+    - EMS is the relative unit to use
+- <b> DO NOT REPEAT YOURSELF IN YOUR CODE </b>
+### GOES AWAY WITH FLEXBOX
+- overflow
+    - specifies what should happen if content overflows an element's box
+    - whether to clip content or to add scrollbars when an element's content is too big to fit in a specified area
+    - overflow property only works for block elements with a specified height.
+- overflow: auto; to be used with float
+- when <b>float</b> must provide a width
+---
+## Breaking CSS into multiple files
+- different files for each screen size
+- import the CSS file
+- downsides
+    - another file for browser to load
+    - another file to keep track of
+    - will be difficult to determine what belongs to what size
+    - queries will be addressing small things
+    - one file - fixes can naturally progess as you go down the page
