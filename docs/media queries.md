@@ -1,5 +1,5 @@
 # Media Queries
-## Responsive Web Design
+## Responsive Web Design History
 - accessible on any technology (various screen sizes)
 - adjusts with screen size
 - want things done as quickly and cheaply as possible
