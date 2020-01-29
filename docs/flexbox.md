@@ -68,6 +68,7 @@
 - laid out in container by your source order by default
 - order:
     - set order as int to change how things lay out on the page
+        - 1 moves 1 toward start, -1 moves 1 toward end
     - search engines index code by order it is written - this property allows you to put more important info first in HTML and lay it out differently
     - can put any int you want, the higher you go the farther into the div
 - flex-grow:
