@@ -20,6 +20,7 @@ body {
 .menu {
     overflow: hidden;
     position: relative;
+    height: 6rem;
 }
 
 .menu div.hamburger {

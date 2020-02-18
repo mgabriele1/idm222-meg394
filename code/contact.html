@@ -11,6 +11,7 @@
     </style>
     <link rel="stylesheet" href="stylesheet.css"/>
     <link rel="icon" href="../graphics/favicon.ico" type="image/x-icon"/>
+    <link href="form.php">
 </head>
 
 <!--BODY-->
@@ -38,9 +39,18 @@
         </div>
     </div>
     
-<!--ABOUT-->
+<!--CONTACT-->
     <div>
        <h1>Contact</h1>
+    </div>
+<!--FORM-->
+    <div class="form">
+    <form method="post" name="myemailform" action="form.php">
+        Enter Name:<input type="text" name="name">
+        Enter Email Address:<input type="text" name="email">
+        Enter Message:<textarea name="message"></textarea>
+        <input type="submit" value="Send Form">
+    </form>
     </div>
 <!--GET SCRIPT-->
 <!--my script-->
