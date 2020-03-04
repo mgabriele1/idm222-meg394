@@ -16,12 +16,12 @@ body {
 /* MENU */
 /* menu style */
 .menu {
-    overflow: hidden;
-    position: relative;
-    height: 6rem; 
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
-.menu div.hamburger {
+.hamburger {
     display: block;
     position: absolute;
     right: 0;
@@ -149,17 +149,12 @@ div.row {
 
 /* GRIDs */
 /* home */
-.body-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.home-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 12fr;
     width: 100vw;
     height: 100vh;
-}
-.home-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /* about*/
