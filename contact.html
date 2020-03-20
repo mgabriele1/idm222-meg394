@@ -10,17 +10,17 @@
         @import url("https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300,500,700&display=swap");
     </style>
     <link rel="stylesheet" href="stylesheet.css"/>
-    <link rel="icon" href="../graphics/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="graphics/favicon.ico" type="image/x-icon"/>
+    <link href="form.php">
 </head>
 
 <!--BODY-->
 <body>
-<div class="bodywrapper">
     <!--HIDDEN MENU-->
     <div class="menu">
         <!--LOGO-->
         <a href="index.html" class="mglogo">
-            <img src="../graphics/bottomlogo.png" alt="MG Logo">
+            <img src="graphics/bottomlogo.png" alt="MG Logo">
         </a>
          <!--HAMBURGER MENU ICON-->
         <div class="hamburger" onclick="menuToggle(); hamburger()">
@@ -39,31 +39,20 @@
             <a href="contact.html">Contact</a>
         </div>
     </div>
-    <!--LOGO ANIMATION-->
-<div class = home-wrapper >
-    <div id="dripgif" class="hiddenpic1">
-        <picture class="backanim">
-            <source media="(min-width: 640px)" srcset="../graphics/driplarge" />
-            <source media="(min-width: 400px)" srcset="../graphics/dripmedium" />
-            <img src="../graphics/dripsmall" alt="MG Logo" />
-        </picture>
+    
+<!--CONTACT-->
+    <div>
+       <h1>Contact</h1>
     </div>
-    <div id="heartsgif" class="hiddenpic2">
-        <picture class="backanim">
-            <source media="(min-width: 640px)" srcset="../graphics/heartslarge" />
-            <source media="(min-width: 400px)" srcset="../graphics/heartsmedium" />
-            <img src="../graphics/heartssmall" alt="MG Logo" />
-        </picture>
+<!--FORM-->
+    <div class="form">
+    <form method="post" name="myemailform" action="form.php">
+        Enter Name:<input type="text" name="name">
+        Enter Email Address:<input type="text" name="email">
+        Enter Message:<textarea name="message"></textarea>
+        <input type="submit" value="Send Form">
+    </form>
     </div>
-    <div id="smokegif" class="hiddenpic3">
-    <picture class="backanim">
-        <source media="(min-width: 640px)" srcset="../graphics/smokelarge" />
-        <source media="(min-width: 400px)" srcset="../graphics/smokemedium" />
-        <img src="../graphics/smokesmall" alt="MG Logo" />
-    </picture>
-    </div>
-</div>
-</div>
 <!--GET SCRIPT-->
 <!--my script-->
 <script src="script.js"></script>
