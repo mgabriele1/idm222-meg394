@@ -51,6 +51,7 @@ body {
     grid-area: hamburger;
     justify-self: flex-end;
     padding: 1rem 3rem 1rem 3rem;
+    cursor: pointer;
 }
 
 /* header grid */
@@ -112,7 +113,6 @@ body {
   
   /* Rotate first bar */
   .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
     transform: rotate(-45deg) translate(-9px, 6px) ;
   }
   
@@ -123,7 +123,6 @@ body {
   
   /* Rotate last bar */
   .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
     transform: rotate(45deg) translate(-8px, -8px) ;
   }
 
@@ -155,9 +154,21 @@ body {
 
 .homeimg {
     grid-area: main;
-    margin: 5rem 0 5rem 0;
+    margin: 5rem 0 0 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100vw;
+    height: 100vh;
+    align-items: start;
+    justify-items: center;
 }
 
+.homeimg img {
+    max-width:100%;
+    height:auto;
+    margin: 0;
+    padding: 0;
+}
 
 /* ------------------- ABOUT PAGE --------------------  */
 
@@ -251,7 +262,7 @@ body {
     text-align: center;
     padding: 4rem;
     font-size: .9rem;
-    margin: -1 0 0 -2.5rem;
+    margin: 0;
 }
 
 .about-wrapper {
@@ -519,7 +530,7 @@ body {
     }
     #a2 {
         padding: 8rem 10rem;
-        margin: -25rem 0 0 -3;
+        margin: -25rem 0 0 -3rem;
         clip-path:circle(30%);
     }
     #a3 {
@@ -615,4 +626,145 @@ body {
      opacity: 0.7;
     }
 
- 
+/* ------------------- WORK  --------------------  */
+
+ .work-wrapper {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    height: 100%;
+    width: 100%;
+    margin: 5rem 0 0 0;
+    justify-items: center;
+    align-items: center;
+ }
+.projtitle {
+    grid-area: tit;
+}
+.projtitle img{
+    max-width:100%;
+    height:auto;
+    padding: 1rem 2rem;
+}
+.projimg {
+    grid-area: img;
+    margin: 1rem;
+}
+.projimg img{
+    border-radius: 1rem;
+    max-width:100%;
+    height:auto;
+}
+.projtext {
+    font-size: 1rem;
+    grid-area: txt;
+    padding: 1rem;
+}
+.project-wrapper button {
+    padding: 1rem;
+    color: black;
+    background-color: white;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-transform: uppercase;
+    border: none;
+    border-radius: .5rem;
+    font-size: 1rem;
+    grid-area: btn;
+    margin: 1rem auto 2rem;
+}
+
+.project-wrapper button:hover {
+    padding: 1.3rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    
+}
+.project-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    grid-template-areas: 
+    "tit" 
+    "img"
+    "txt"
+    "btn";
+    margin: 1rem;
+    border-radius: 1.5rem;
+    justify-items: center;
+    align-items: center;
+    max-width: 100%;
+    padding: 1rem 1rem 2rem;
+    background-color: black;
+}
+
+/* adjust to screen sizes */
+@media only screen and (min-width: 470px)  {
+    .project-wrapper {
+        display: grid;
+        grid-template-columns: .5fr 1fr .5fr 1fr .5fr;
+        grid-auto-rows: min-content;
+        grid-template-areas: 
+        ". tit tit tit ." 
+        "txt txt img img img"
+        ". btn btn btn .";
+    }
+    .projtext {
+        font-size: .85rem;
+    }
+}
+@media screen and (max-width: 330px) {
+    .projtext {
+        font-size: .85rem;
+    }
+}
+@media screen and (max-width: 300px) {
+    .projtext {
+        font-size: .75rem;
+    }
+    .project-wrapper button {
+        font-size: .75rem;
+    }
+    .project-wrapper button:hover {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
+@media only screen and (min-width: 570px) {
+    .projtext {
+        font-size: 1rem;
+    }
+}
+@media only screen and (min-width: 715px) {
+    .work-wrapper {
+        grid-template-columns: 1fr 1fr;
+     }
+     .project-wrapper {
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+        grid-template-areas: 
+        "tit" 
+        "img"
+        "txt"
+        "btn";
+     }
+}
+@media only screen and (min-width: 900px)  {
+    .project-wrapper {
+        grid-template-columns: .5fr 1fr .5fr 1fr .5fr;
+        grid-auto-rows: min-content;
+        grid-template-areas: 
+        ". tit tit tit ." 
+        "txt txt img img img"
+        ". btn btn btn .";
+    }
+    .projtext {
+        font-size: .85rem;
+    }
+}
+
+@media only screen and (min-width: 1100px)  {
+    .projtext {
+        font-size: 1rem;
+    }
+}

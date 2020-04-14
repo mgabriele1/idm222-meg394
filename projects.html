@@ -10,7 +10,7 @@
     <style>
         @import url("https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300,500,700&display=swap");
     </style>
-    <link rel="stylesheet" href="stylesheet.css"/>
+    <link rel="stylesheet" href="stylesheet.css" type="text/css"/>
     <link rel="icon" href="graphics/favicon.ico" type="image/x-icon"/>
 </head>
 
@@ -43,39 +43,95 @@
                 <a href="about.html">About/ Contact</a>
             </div>
         </div>
-<div class="art-wrapper">
-    <!--PAGES 12-->
-    <div class="row">
-        <div class="column"> <!--3 PROJECTS PER-->
-            <a href="pages/greenhouse.html">
-                <img src="graphics/projectlogos/greenhouse.jpg" alt="GreenHouse logo and plants">
-            </a> 
-            <a href="pages/paradisewaview.html">
-                <img src="graphics/projectlogos/paradisewaview.jpg" alt="Paradise With a View logo">
-            </a>
-        </div>
-        <div class=column>
-            <a href="pages/taskbuddy.html">
-                <img src="graphics/projectlogos/taskbuddy.jpg" alt="TaskBuddy text and brain wired to heart">
-            </a>
-            <a href="pages/nemo.html">
-                <img src="graphics/projectlogos/nemo.jpg" alt="Nemo holding microphone">
-            </a>
-        </div>
-        <div class=column>
-            <a href="pages/io.html">
-                <img src="graphics/projectlogos/io.jpg" alt="Woman blowing IO smoke">
-            </a>
-        </div>
-        <div class=column>
-            <a href="pages/skittlessorter.html">
-                <img src="graphics/projectlogos/skittlessorter.jpg" alt="Skittles logo">
-            </a>
-        </div>
+    <!--PROJECTS 6-->    
+<div class="work-wrapper">
+    <div class="project-wrapper">
+        <picture class="projtitle">
+            <source media="(min-width: 200px)" srcset="graphics/projectoptimized/greenhouse400.png"/>
+            <img src="graphics/projectoptimized/greenhouse200.png" alt="GreenHouse logo">
+        </picture>
+        <picture class="projimg">
+            <source media="(min-width: 200px)" srcset="graphics/projectoptimized/greenhouse400.jpg"/>
+            <img src="graphics/projectoptimized/greenhouse200.jpg" alt="GreenHouse logo and plants">
+        </picture>
+        <p class="projtext">
+            GreenHouse is a mobile applicaton I designed to help users care for their plants. The graphics in this prototype are hand drawn in Adobe Photoshop.
+        </p>
+        <!--<button id="gh">See More</button>-->
     </div>
+    <div class="project-wrapper">
+        <picture class="projtitle">
+            <source media="(min-width: 200px)" srcset="graphics/projectoptimized/paradise400.png"/>
+            <img src="graphics/projectoptimized/paradise200.png" alt="Paradise with a View logo">
+        </picture>
+        <picture class="projimg">
+            <source media="(min-width: 200px)" srcset="graphics/projectoptimized/paradisewaview400.jpg"/>
+            <img src="graphics/projectoptimized/paradisewaview200.jpg" alt="Paradise with a View logo">
+        </picture>
+        <p class="projtext">
+            This is a redesign for the website 'paradise with a view' This website functions as a rental website for privately owned condos in Waikiki Beach, Honolulu, Hawaii.
+        </p>
+        <!--<button id="pwav">See More</button>-->
+    </div>
+    <div class="project-wrapper">
+        <picture class="projtitle">
+            <source media="(min-width: 200px)" srcset="graphics/projectoptimized/taskbuddy400.png"/>
+            <img src="graphics/projectoptimized/taskbuddy200.png" alt="TaskBuddy logo">
+        </picture>
+        <picture class="projimg">
+            <source media="(min-width: 200px)" srcset="graphics/projectoptimized/taskbuddy400.jpg"/>
+            <img src="graphics/projectoptimized/taskbuddy200.jpg" alt="TaskBuddy logo">
+        </picture>
+        <p class="projtext">
+            Taskbuddy is a multimdia product designed by my group and I. It is an app and a mood sensing wristband. The app is a task managemnt app that uses the emotional data from the wristband to plan the user's day and improve the users mood.
+        </p>
+        <!--<button id="tb">See More</button>-->
+    </div>
+    <div class="project-wrapper">
+        <picture class="projtitle">
+            <source media="(min-width: 200px)" srcset="graphics/projectoptimized/nemo400.png"/>
+            <img src="graphics/projectoptimized/nemo200.png" alt="Nemo audio">
+        </picture>
+        <picture class="projimg">
+            <source media="(min-width: 200px)" srcset="graphics/projectoptimized/nemo400.jpg"/>
+            <img src="graphics/projectoptimized/nemo200.jpg" alt="Nemo holding microphone">
+        </picture>
+        <p class="projtext">
+            The audio in this 'Finding Nemo' trailer was stripped using ProTools. All of the audio was then re-added using royalty-free music and sound effects and my voice.
+        </p>
+        <!--<button id="na">See More</button>-->
+    </div>        
+    <div class="project-wrapper">
+        <picture class="projtitle">
+            <source media="(min-width: 200px)" srcset="graphics/projectoptimized/io400.png"/>
+            <img src="graphics/projectoptimized/io200.png" alt="IO logo">
+        </picture>
+        <picture class="projimg">
+            <source media="(min-width: 200px)" srcset="graphics/projectoptimized/io400.jpg"/>
+            <img src="graphics/projectoptimized/io200.jpg" alt="Woman blowing IO smoke">
+        </picture>
+        <p class="projtext">
+            IO is a shoe brand for a shoe I designed with AliveShoes.
+        </p>
+        <!--<button id="io">See More</button>-->
+    </div>
+    <div class="project-wrapper">
+        <picture class="projtitle">
+            <source media="(min-width: 200px)" srcset="graphics/projectoptimized/skittles400.png"/>
+            <img src="graphics/projectoptimized/skittles200.png" alt="Skittles logo">
+        </picture>
+        <picture class="projimg">
+            <source media="(min-width: 200px)" srcset="graphics/projectoptimized/skittlessorter400.jpg"/>
+            <img src="graphics/projectoptimized/skittlessorter200.jpg" alt="Skittles logo">
+        </picture>
+        <p class="projtext">
+            The Skittles Color Sorter is an ardiuno color sorter I built and wired.
+        </p>
+         <!--<button id="scs">See More</button>-->
+    </div>
+</div>
     <div class= "footer">
         <img src="graphics/bottomlogo.png" alt="MG Logo">
-    </div>
     </div>
     </div>
     <!--GET SCRIPT-->
